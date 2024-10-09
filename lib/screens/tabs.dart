@@ -14,6 +14,7 @@ const kInitialFilters = {
   Filter.vegan: false,
 };
 
+/// Represents the tabs screen
 class TabsScreen extends ConsumerStatefulWidget {
   const TabsScreen({super.key});
   @override

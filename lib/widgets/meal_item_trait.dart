@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 
+/// Represents the traits row within each meal card
 class MealItemTrait extends StatelessWidget {
   const MealItemTrait({
     super.key,

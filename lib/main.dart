@@ -4,6 +4,7 @@ import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:meals_app/screens/tabs.dart';
 
+/// Main Theme of the application
 final theme = ThemeData(
   useMaterial3: true,
   colorScheme: ColorScheme.fromSeed(
@@ -13,6 +14,7 @@ final theme = ThemeData(
   textTheme: GoogleFonts.latoTextTheme(),
 );
 
+/// Main method
 void main() {
   runApp(
     const ProviderScope(
@@ -21,6 +23,7 @@ void main() {
   );
 }
 
+/// Represents the main app
 class App extends StatelessWidget {
   const App({super.key});
 

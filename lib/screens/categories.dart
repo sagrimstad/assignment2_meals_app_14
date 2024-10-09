@@ -5,6 +5,7 @@ import 'package:meals_app/models/meal.dart';
 import 'package:meals_app/screens/meals.dart';
 import 'package:meals_app/widgets/category_grid_item.dart';
 
+/// Represents the categories screen
 class CategoriesScreen extends StatelessWidget {
   const CategoriesScreen({
     super.key,

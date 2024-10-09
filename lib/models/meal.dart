@@ -1,15 +1,18 @@
+/// Represents different states of complexity
 enum Complexity {
   simple,
   challenging,
   hard,
 }
 
+/// Represents different states of affordablility
 enum Affordability {
   affordable,
   pricey,
   luxurious,
 }
 
+/// Representing a meal
 class Meal {
   const Meal({
     required this.id,

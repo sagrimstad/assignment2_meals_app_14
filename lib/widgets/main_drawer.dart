@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 
+/// Represents a drawer menu that appears when side menu button is pressed
 class MainDrawer extends StatelessWidget {
   const MainDrawer({super.key, required this.onSelectedScreen});
 

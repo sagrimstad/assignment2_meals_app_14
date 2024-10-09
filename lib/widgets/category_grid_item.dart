@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:meals_app/models/category.dart';
 
+/// Represents the category grid which is shown on the main menu
 class CategoryGridItem extends StatelessWidget {
   const CategoryGridItem({
     super.key,

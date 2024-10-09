@@ -3,6 +3,7 @@ import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:meals_app/models/meal.dart';
 import 'package:meals_app/providers/favorites_provider.dart';
 
+/// Represents the meal details screen
 class MealDetailsScreen extends ConsumerWidget {
   const MealDetailsScreen({
     super.key,

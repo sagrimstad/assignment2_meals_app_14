@@ -1,6 +1,7 @@
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:meals_app/providers/meals_provider.dart';
 
+/// Represents different states of food filters
 enum Filter {
   glutenFree,
   lactoseFree,
@@ -8,6 +9,7 @@ enum Filter {
   vegan,
 }
 
+/// Notifier that handles filters
 class FiltersNotifier extends StateNotifier<Map<Filter, bool>> {
   FiltersNotifier()
       : super({
@@ -29,11 +31,13 @@ class FiltersNotifier extends StateNotifier<Map<Filter, bool>> {
   }
 }
 
+/// Provider that handles filters
 final filtersProvider =
     StateNotifierProvider<FiltersNotifier, Map<Filter, bool>>(
   (ref) => FiltersNotifier(),
 );
 
+/// Provider that handles meals and active filters
 final filteredMealsProvider = Provider((ref) {
   final meals = ref.watch(mealsProvider);
   final activeFilters = ref.watch(filtersProvider);
