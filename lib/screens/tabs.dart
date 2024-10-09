@@ -66,6 +66,7 @@ class _TabsScreenState extends ConsumerState<TabsScreen> {
       ),
       drawer: MainDrawer(
         onSelectedScreen: _setScreen,
+        meals: avaliableMeals,
       ),
       body: activePage,
       bottomNavigationBar: BottomNavigationBar(

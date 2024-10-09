@@ -1,10 +1,33 @@
+import 'dart:math';
+
 import 'package:flutter/material.dart';
+import 'package:meals_app/models/meal.dart';
+import 'package:meals_app/providers/meals_provider.dart';
+import 'package:meals_app/screens/meal_details.dart';
 
 /// Represents a drawer menu that appears when side menu button is pressed
 class MainDrawer extends StatelessWidget {
-  const MainDrawer({super.key, required this.onSelectedScreen});
+  const MainDrawer(
+      {super.key, required this.onSelectedScreen, required this.meals});
 
   final void Function(String identifier) onSelectedScreen;
+  final List<Meal> meals;
+
+  void _selectRandomMeal(BuildContext context) {
+    if (meals.isNotEmpty) {
+      final random = Random();
+      final randomMeal = meals[random.nextInt(meals.length)];
+
+      // Navigate to MealDetailsScreen using the random meal
+      Navigator.of(context).push(
+        MaterialPageRoute(
+          builder: (ctx) => MealDetailsScreen(
+            meal: randomMeal,
+          ),
+        ),
+      );
+    }
+  }
 
   @override
   Widget build(BuildContext context) {
@@ -71,6 +94,22 @@ class MainDrawer extends StatelessWidget {
             ),
             onTap: () {
               onSelectedScreen("filters");
+            },
+          ),
+          ListTile(
+            leading: Text(
+              '🎲',
+              style: TextStyle(fontSize: 24.0),
+            ),
+            title: Text(
+              "Try your luck",
+              style: Theme.of(context).textTheme.titleSmall!.copyWith(
+                    color: Theme.of(context).colorScheme.onSurface,
+                    fontSize: 24,
+                  ),
+            ),
+            onTap: () {
+              _selectRandomMeal(context);
             },
           ),
         ],
