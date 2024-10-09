@@ -1,6 +1,6 @@
 {
-    "name": "assign2_meals_app_14",
-    "short_name": "assign2_meals_app_14",
+    "name": "meals_app",
+    "short_name": "meals_app",
     "start_url": ".",
     "display": "standalone",
     "background_color": "#0175C2",

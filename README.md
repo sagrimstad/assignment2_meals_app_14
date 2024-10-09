@@ -1,4 +1,4 @@
-# assign2_meals_app_14
+# meals_app
 
 A new Flutter project.
 
