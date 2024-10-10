@@ -7,7 +7,6 @@ Most of the the code in this application is from the Udemy course "[Flutter & Da
 However, we have made some alterations and some additions, like:
 - Changed the color scheme
 - A "Try your luck" button/functionality
-- reason 3
 
 ## User Stories
 "I want functionality that i can "try my luck" with different meals, so if i don't know what to make, I can click a button that takes me to a random meal."  
@@ -18,6 +17,7 @@ This application is build up using the Flutter framework and the programming lan
 Rivepod allows us to send and access dynamic data across the entire application where it is needed without sending the data to every class.
 
 ## Class Diagram
+In github repo
 
 ## Additional features
 We have created an "Try your luck" feature. A new button appears in the drawer that when pressed, shows you a new random meal. 
